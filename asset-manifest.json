@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/youssef_toumi_portfolio/static/css/main.6ed01b60.css",
+    "main.js": "/youssef_toumi_portfolio/static/js/main.ba4b369d.js",
+    "index.html": "/youssef_toumi_portfolio/index.html",
+    "main.6ed01b60.css.map": "/youssef_toumi_portfolio/static/css/main.6ed01b60.css.map",
+    "main.ba4b369d.js.map": "/youssef_toumi_portfolio/static/js/main.ba4b369d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6ed01b60.css",
+    "static/js/main.ba4b369d.js"
+  ]
+}
