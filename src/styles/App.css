@@ -146,13 +146,16 @@ nav.scrolled {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-primary);
-    border-top: 1px solid var(--border);
+    right: 0;
+    width: 250px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     flex-direction: column;
-    padding: 1rem;
-    box-shadow: 0 5px 10px var(--shadow);
+    padding: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin-top: 0.5rem;
+    margin-right: 1rem;
 }
 
 .mobile-menu.active {
@@ -163,15 +166,17 @@ nav.scrolled {
     background: none;
     border: none;
     color: var(--text-primary);
-    padding: 1rem;
+    padding: 0.8rem 1rem;
     text-align: left;
     font-size: 1rem;
     cursor: pointer;
     font-family: inherit;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .mobile-nav-link:hover {
-    background: var(--bg-secondary);
+    background: rgba(129, 140, 248, 0.1);
     color: var(--accent);
 }
 

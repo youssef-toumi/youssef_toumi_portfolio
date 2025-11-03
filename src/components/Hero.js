@@ -4,14 +4,14 @@ const Hero = () => {
   const downloadCV = () => {
     try {
       const link = document.createElement('a');
-      link.href = '/cv.pdf';
+      link.href = `${process.env.PUBLIC_URL}/cv.pdf`;
       link.download = 'Youssef_Toumi_CV.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     } catch (error) {
       console.error('Error downloading CV:', error);
-      window.open('/cv.pdf', '_blank');
+      window.open(`${process.env.PUBLIC_URL}/cv.pdf`, '_blank');
     }
   };
 
