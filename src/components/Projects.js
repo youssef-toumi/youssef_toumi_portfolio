@@ -25,7 +25,7 @@ const Projects = () => {
         "Production-ready, scalable architecture for real-world deployment"
       ],
       impact: "Transformed raw AI outputs into actionable insights through an intelligent dashboard, enabling supervisors to efficiently monitor multiple workers while maintaining privacy and security standards. Delivered a production-ready solution demonstrating professional integration of edge devices, cloud deployment, and user-friendly interfaces.",
-      demoLink: "/demos/wmvp_demo.mp4",
+      demoLink: `${process.env.PUBLIC_URL}/demos/wmvp_demo.mp4`,
       githubLink: "https://github.com/youssef-toumi/Woker-Monitoring-and-Verification-Pipeline-System"
     },
     {

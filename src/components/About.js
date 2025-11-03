@@ -43,7 +43,7 @@ const About = () => {
         <div className="about-main">
           <div className="about-text-card">
             <div className="profile-photo-container">
-              <img src="/youssef.png" alt="Youssef Toumi" className="profile-photo" />
+              <img src={`${process.env.PUBLIC_URL}/youssef.png`} alt="Youssef Toumi" className="profile-photo" />
             </div>
             <h3>Who I Am</h3>
             <p className="about-text">
