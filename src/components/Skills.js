@@ -4,32 +4,47 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "AI & Machine Learning",
-      skills: ["Machine Learning", "Deep Learning", "Computer Vision", "Neural Networks"]
+      icon: "🤖",
+      skills: ["Deep Learning", "Computer Vision", "OpenCV", "PyTorch", "Model Training & Optimization"]
     },
     {
-      title: "Frameworks & Libraries",
-      skills: ["PyTorch", "TensorFlow", "OpenCV", "Scikit-learn"]
+      title: "Development",
+      icon: "💻",
+      skills: ["Python", "React.js", "SQL", "Git"]
     },
     {
-      title: "Programming",
-      skills: ["Python", "JavaScript", "SQL", "C++"]
+      title: "MLOps & Deployment",
+      icon: "🚀",
+      skills: ["Edge AI Deployment", "Cloud Deployment", "Raspberry Pi", "Model Serving"]
     },
     {
-      title: "Deployment & Tools",
-      skills: ["Edge-Cloud", "Raspberry Pi", "Docker", "Git"]
+      title: "Languages",
+      icon: "🌍",
+      skills: ["Arabic (Native)", "English (Fluent)", "French (Intermediate)"]
     }
   ]
 
   return (
-    <section id="skills">
-      <h2 className="section-title">Skills & Technologies</h2>
-      <div className="skills-grid">
+    <section id="skills" className="skills-section">
+      <div className="section-header">
+        <span className="section-tag">Expertise</span>
+        <h2 className="section-title">Skills & Technologies</h2>
+        <p className="section-subtitle">Technical proficiencies across AI, development, and deployment</p>
+      </div>
+
+      <div className="skills-grid-modern">
         {skillCategories.map((category, index) => (
-          <div key={index} className="skill-category">
-            <h3>{category.title}</h3>
-            <div className="skill-list">
+          <div key={index} className="skill-category-modern">
+            <div className="skill-category-header">
+              <span className="skill-category-icon">{category.icon}</span>
+              <h3>{category.title}</h3>
+            </div>
+            <div className="skill-tags-grid">
               {category.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} className="skill-item">{skill}</span>
+                <div key={skillIndex} className="skill-tag-item">
+                  <span className="skill-tag-dot"></span>
+                  <span className="skill-tag-name">{skill}</span>
+                </div>
               ))}
             </div>
           </div>

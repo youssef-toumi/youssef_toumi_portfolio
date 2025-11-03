@@ -14,7 +14,7 @@ function App() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <div data-theme={theme}>
+    <div className="app-wrapper" data-theme={theme}>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Hero />
       <About />

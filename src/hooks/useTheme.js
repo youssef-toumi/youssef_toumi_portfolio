@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 
 export const useTheme = () => {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light'
+    const savedTheme = localStorage.getItem('theme') || 'dark'
     setTheme(savedTheme)
   }, [])
 
