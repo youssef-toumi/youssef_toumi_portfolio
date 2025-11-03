@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import VideoModal from './VideoModal'
 
 const Projects = () => {
+  const [modalState, setModalState] = useState({
+    isOpen: false,
+    videoUrl: '',
+    title: ''
+  })
+
   const projects = [
     {
       title: "Worker Monitoring & Verification Pipeline System",
@@ -18,7 +25,7 @@ const Projects = () => {
         "Production-ready, scalable architecture for real-world deployment"
       ],
       impact: "Transformed raw AI outputs into actionable insights through an intelligent dashboard, enabling supervisors to efficiently monitor multiple workers while maintaining privacy and security standards. Delivered a production-ready solution demonstrating professional integration of edge devices, cloud deployment, and user-friendly interfaces.",
-      demoLink: "#",
+      demoLink: "/demos/wmvp_demo.mp4",
       githubLink: "https://github.com/youssef-toumi/Woker-Monitoring-and-Verification-Pipeline-System"
     },
     {
@@ -43,14 +50,30 @@ const Projects = () => {
     }
   ]
 
-  const handleDemoClick = (e, demoLink) => {
-    e.preventDefault()
-    alert('Demo link will be added here. Replace this with your actual demo URL.')
-    // Or: window.open(demoLink, '_blank')
+  const handleDemoClick = (project) => {
+    setModalState({
+      isOpen: true,
+      videoUrl: project.demoLink,
+      title: project.title
+    })
+  }
+
+  const closeModal = () => {
+    setModalState({
+      isOpen: false,
+      videoUrl: '',
+      title: ''
+    })
   }
 
   return (
     <section id="projects" className="projects-section">
+      <VideoModal
+        isOpen={modalState.isOpen}
+        onClose={closeModal}
+        videoUrl={modalState.videoUrl}
+        title={modalState.title}
+      />
       <div className="section-header">
         <span className="section-tag">Portfolio</span>
         <h2 className="section-title">Featured Projects</h2>
@@ -121,7 +144,7 @@ const Projects = () => {
               <div className="project-links-modern">
                 <button
                   className="project-btn project-btn-primary"
-                  onClick={(e) => handleDemoClick(e, project.demoLink)}
+                  onClick={() => handleDemoClick(project)}
                 >
                   <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" fill="currentColor" />
