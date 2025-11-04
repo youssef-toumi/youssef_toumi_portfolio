@@ -1265,6 +1265,21 @@ footer {
 
     .nav-container {
         padding: 1rem;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mobile-menu-btn {
+        order: -1;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
     }
 
     .hero {
