@@ -37,7 +37,7 @@ const VideoModal = ({ isOpen, onClose, videoUrl, title }) => {
                 </div>
 
                 <div className="video-container">
-                    <video controls autoPlay controlsList="nodownload">
+                    <video controls autoPlay>
                         <source src={videoUrl} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
