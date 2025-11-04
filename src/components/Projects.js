@@ -45,7 +45,7 @@ const Projects = () => {
         "Responsive React frontend optimized for user experience"
       ],
       impact: "Delivered a fully functional, secure, and user-friendly e-commerce website, demonstrating end-to-end mastery of full-stack web development principles from frontend to backend. Facilitated smooth browsing, shopping, and secure transactions for customers.",
-      demoLink: "#",
+      demoLink: `${process.env.PUBLIC_URL}/demos/E_commerce_demo.mp4`,
       githubLink: "https://github.com/youssef-toumi/online-marketplace"
     }
   ]
