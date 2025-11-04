@@ -1467,15 +1467,30 @@ footer {
 
 .video-container {
     padding: 2rem;
-    background: var(--bg-primary);
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-container video {
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background: #000;
+    outline: none;
+}
+
+.video-container video::-webkit-media-controls {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.video-container video::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1 !important;
 }
 
 .modal-footer {
